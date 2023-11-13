@@ -1,7 +1,7 @@
 {
   "name": "djc-custom-components",
   "private": false,
-  "version": "0.0.1-rc4",
+  "version": "0.1.0",
   "type": "module",
   "main": "dist/index.js",
   "typings": "dist/index.d.js",
@@ -31,7 +31,7 @@
     "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
   },
   "engines": {
-    "node" : ">=12.0.0"
+    "node": ">=12.0.0"
   },
   "scripts": {
     "dev": "npm run storybook",
@@ -43,7 +43,7 @@
     "chromatic": "npx chromatic --project-token=chpt_bcdf3360341c33c",
     "clean": "rimraf dist/",
     "copyfiles": "copyfiles -u 1 src/**/*.css dist/",
-    "push:npm" : "np",
+    "push:npm": "np",
     "test": "echo 'all test were good'"
   },
   "devDependencies": {
@@ -73,6 +73,5 @@
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
   },
-  "readme": "ERROR: No README data found!",
-  "_id": "my-storybook@0.0.0"
+  "readme": "ERROR: No README data found!"
 }
