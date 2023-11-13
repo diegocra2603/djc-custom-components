@@ -1,20 +1,45 @@
 {
-  "name": "my-storybook",
-  "private": true,
-  "version": "0.0.0",
+  "name": "djc-custom-components",
+  "private": false,
+  "version": "0.0.1-rc4",
   "type": "module",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.js",
+  "keywords": [
+    "react",
+    "djc",
+    "diego",
+    "jose",
+    "cruz",
+    "components"
+  ],
+  "license": "MIT",
+  "repository": {
+    "url": "",
+    "type": "git"
+  },
+  "files": [
+    "dist/"
+  ],
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
+  },
   "scripts": {
     "dev": "npm run storybook",
-    "build": "tsc && vite build",
+    "build": "npm run clean && tsc && npm run copyfiles",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_bcdf3360341c33c"
-  },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "chromatic": "npx chromatic --project-token=chpt_bcdf3360341c33c",
+    "clean" : "rimraf dist/",
+    "copyfiles" : "copyfiles -u 1 src/**/*.css dist/"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.5.3",
@@ -35,6 +60,9 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "eslint-plugin-storybook": "^0.6.15",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rimraf": "^5.0.5",
     "storybook": "^7.5.3",
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
